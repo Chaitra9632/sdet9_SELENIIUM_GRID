@@ -1,0 +1,15 @@
+HUb:
+cmd> java -jar selenium-standalone-server.jar -role hub
+
+
+NODE for chrome browser:
+
+cmd> java -Dwebdriver.chrome.driver=c://chrome-path -jar selenium-standalone-server.jar -role node -port 5555
+     -hub http://hub-ip-address-for-for-which-the-client-should-connect:hub-port-number//grid/register
+
+
+
+NODE for firefox browser:
+
+cmd> java -Dwebdriver.gecko.driver=c://gecko-driver-path -jar selenium-standalone-server.jar -role node -port 5555
+     -hub http://hub-ip-address-for-for-which-the-client-should-connect:hub-port-number//grid/register
